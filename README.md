@@ -262,24 +262,42 @@ Without using Xcode, what will the loop below print?  Explain below.
 ```swift
 outerloop: for x in 1...3 {
     innerloop: for y in 1...3 {
-        if y == 2{
+        if y == 2 {
             continue outerloop
         }
         print("x = \(x), y = \(y)")
     }
 }
 ```
+the output will be:
+"x = \(1), y = \(1)"
+"x = \(2), y = \(1)"
+"x = \(3), y = \(1)"
 
+the innerloop will not go past 1 because it's condition (if y == 2) was met so i has executed the "continue" which tells the program to stop there and just continue the outerloop.
 ***
 ## Question 20
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
+
+
+for x in 0...10 {
+for y in 0...10 {
+print("\(x),\(y)")
+}
+}
+
 
 ***
 ## Question 21
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
 
+for x in 0...10 {
+for y in 0...10 where y == x + 5 {
+print("\(x),\(y)")
+}
+}
 ***
 ## Question 22
 
@@ -296,6 +314,15 @@ Output:
 16
 25
 ```
+
+var N = 5
+var numSquared = 1
+
+while numSquared <= N {
+print(numSquared * numSquared)
+
+numSquared += 1
+}
 
 ***
 ## Question 23
@@ -326,5 +353,16 @@ Try printing a single line of * first.
 
 Hint 2
 You can use print("") to print an empty line.
+
+
+var N = 3
+
+
+for _ in 1...N {
+for _ in 1...N {
+print("*", terminator: "")
+}
+print("")
+}
 
 ***
