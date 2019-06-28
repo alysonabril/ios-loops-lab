@@ -14,30 +14,58 @@
 
 Write code that prints all the numbers from 1 to 150, **inclusive.**
 
+var range1 = 1...150
+for number in range1 {
+print(number)
+}
 ***
 ## Question 2
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
 
+var range2 = 142..<159
+for number in range2 {
+print (number)
+}
+
 ***
 ## Question 3
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
+var range3 = 15...80
+for number in range3 where number % 2 == 0 {
+print(number)
+}
 
 ***
 ## Question 4
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
 
+var range4 = 19...51
+for number in range4 where number % 2 == 1 {
+print(number)
+}
+
 ***
 ## Question 5
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
 
+var range5 = 1..<100
+for number in range5 where number % 10 == 5 {
+print(number)
+}
+
 ***
 ## Question 6
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
+
+var range6 = 1...40
+for number in range6 where number % 10 == 7 {
+print(number)
+}
 
 ***
 ## Question 7
@@ -46,12 +74,20 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 3`
 
+for i in 10...150 where i % 3 == 0 {
+print(i)
+}
+
 ***
 ## Question 8
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that are divisible by 2 and 3`
+var someRange = 20...150
+for i in someRange where i % 2 == 0 && i % 3 == 0 {
+print(i)
+}
 
 ***
 ## Question 9
@@ -59,6 +95,11 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that end with a 4`
+var range = 20...150
+
+for number in range where number % 10 == 4 {
+print(number)
+}
 
 ***
 ## Question 10
@@ -80,6 +121,7 @@ while (i > 3) {
 }
 
 // Your explanation here
+infintitely, there is no condition that tells the code when to stop
 ```
 
 ***
@@ -92,6 +134,9 @@ var i = 5
 
 while (i > 3) {
     i += 1
+    if i == 9 {
+    break
+}
 }
 ```
 
@@ -104,7 +149,11 @@ Change the code below to make the loop stop executing after it has run 1,000 tim
 var i = 5
 
 while (i > 3) {
-    i += 1
+i += 1
+if i == 1005 {
+print(i)
+break
+}
 }
 ```
 
@@ -117,7 +166,13 @@ Change the code below to make the loop stop executing after it has run 1,000 tim
 var i = 5
 
 while (i > 3) {
-    i += 1
+if i == 1005 {
+break
+}
+if i % 2 == 0 {
+print(i)
+}
+i += 1
 }
 ```
 
@@ -142,12 +197,13 @@ repeat {
     i += 1
 } while i <= 10
 ```
-
+the first loop is a while loop, the second is a repeat while loop. The while loop states it's condition on the first line before opening the code block, and the repeat while loop states it's condition on the just after the last curly brace of the code block.  Their outputs will be the same because  their are the same, just listed differently.  They will both begin with "i = 1" and then end with "i = 10"
 ***
 ## Question 16
 
 What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
 
+Break tells the program should immediately stop a piece of code from recurring infinitely.  Continue tells the program that the code has finished iterating through the first loop, so it will stop and start the next iteration. 
 ***
 ## Question 17
 
@@ -162,16 +218,16 @@ for i in 1...10 {
 }
 ```
 
-[]1
-[]2
-[]3
+[]1****
+[]2****
+[]3****
 []4
 []5
 []6
 []7
-[]8
-[]9
-[]10
+[]8******
+[]9******
+[]10*****
 
 ***
 ## Question 18
@@ -187,9 +243,9 @@ for i in 1...10 {
 }
 ```
 
-[]1
-[]2
-[]3
+[]1*****
+[]2****
+[]3*****
 []4
 []5
 []6
