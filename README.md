@@ -296,9 +296,11 @@ print(tuple)
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
 
-for x in 0...10 {
-for y in 0...10 where y == x + 5 {
-print("\(x),\(y)")
+var myRange = 0...10
+for x in myRange {
+for y in myRange where y == x + 5 {
+let tuple = (x,y)
+print(tuple)
 }
 }
 ***
