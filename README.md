@@ -281,9 +281,12 @@ the innerloop will not go past 1 because it's condition (if y == 2) was met so i
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
 
 
-for x in 0...10 {
-for y in 0...10 {
-print("\(x),\(y)")
+var range = 0...10
+
+for x in range {
+for y in range {
+let tuple = (x,y)
+print(tuple)
 }
 }
 
